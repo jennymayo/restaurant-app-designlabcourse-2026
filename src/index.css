@@ -1,0 +1,30 @@
+/* Tailwind v4: this one line pulls in all of Tailwind's utility classes. */
+@import "tailwindcss";
+
+/* A few global defaults that apply to the whole app. */
+@layer base {
+  html {
+    /* Slightly larger text is easier to read on a phone. */
+    font-size: 17px;
+  }
+
+  body {
+    background-color: var(--color-stone-50);
+    color: var(--color-stone-900);
+    font-family:
+      ui-rounded, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue",
+      sans-serif;
+  }
+
+  /* One clear, high-contrast focus ring for everything you can tab to.
+     This is what keyboard users see, so we make it easy to spot. */
+  :focus-visible {
+    outline: 3px solid var(--color-sky-700);
+    outline-offset: 2px;
+  }
+
+  /* Buttons should look clickable. */
+  button:not(:disabled) {
+    cursor: pointer;
+  }
+}
